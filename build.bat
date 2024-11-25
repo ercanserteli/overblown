@@ -1,0 +1,1 @@
+C:\emsdk\upstream\emscripten\emmake ninja

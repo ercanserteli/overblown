@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game 2024</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas {                                 
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById('canvas');
+        var Module = {
+            onRuntimeInitialized: function() {
+                
+            },
+            preRun: [],
+            postRun: function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            },
+            print: function(text) {
+                console.log(text);
+            },
+            printErr: function(text) {
+                console.error(text);
+            },
+            canvas: (function() {
+                return canvas;
+            })()
+        };
+    </script>
+    <script src="Game2024.js"></script>
+</body>
+</html>
